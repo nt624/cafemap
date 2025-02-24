@@ -1,0 +1,11 @@
+---
+import MemoForm from '../../components/MemoForm.tsx';  // メモ管理用コンポーネントをインポート
+
+const { id } = Astro.params;  // URLから場所のIDを取得
+---
+<html>
+  <body>
+    <h1>場所の詳細: {id}</h1>
+    <MemoForm client:load placeId={id} />  <!-- メモ管理コンポーネントを表示 -->
+  </body>
+</html>
