@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from "astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BeansDetail from "../../components/BeansDetail";
+export function getStaticPaths() {
+    return [{ params: { id: "1" } }, { params: { id: "2" } }];
+}
+const { id } = Astro.params;
+console.log("Received ID:", id);
+---
+
+<BaseLayout title="Detail">
+    <BeansDetail id={id} client:only="react" />
+</BaseLayout>
