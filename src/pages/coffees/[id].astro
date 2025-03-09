@@ -1,0 +1,14 @@
+---
+import CoffeeDetail from "../../components/CoffeeDetail";
+const { id } = Astro.props;
+---
+
+<html>
+    <head>
+        <title>コーヒー詳細</title>
+    </head>
+    <body>
+        <h1>コーヒーの詳細</h1>
+        <CoffeeDetail id={id} />
+    </body>
+</html>
