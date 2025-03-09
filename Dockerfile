@@ -13,5 +13,8 @@ RUN npm install
 # アプリのソースコードをコピー
 COPY . .
 
+# ポート3000を開放
+EXPOSE 3000  
+
 # Astro の開発サーバーを起動
-CMD ["npm", "run", "dev", "--", "--host"]
+CMD ["npm", "run", "dev", "--", "--host", "--port", "3000"]

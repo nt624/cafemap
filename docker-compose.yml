@@ -1,11 +1,12 @@
-version: '3.8'
+version: '3'
 services:
   astro-app:
     build: .
     ports:
-      - "3000:3000"
+      - "4321:4321"
     volumes:
       - .:/app
       - /app/node_modules
     environment:
       - NODE_ENV=development
+    command: npm run dev -- --host --port 4321
